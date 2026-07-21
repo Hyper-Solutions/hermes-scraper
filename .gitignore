@@ -1,0 +1,19 @@
+# Build output
+/bin/
+*.exe
+*.exe~
+*.out
+*.test
+
+# IDE / editor
+.idea/
+.vscode/
+*.swp
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Scraper output (the data belongs to whoever ran it, not the repo)
+*.json
+*.jsonl
