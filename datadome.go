@@ -402,7 +402,12 @@ func postDataDomeTags(ctx context.Context, c *wrappedClient, pageURL string, pay
 		http.PHeaderOrderKey: {":method", ":authority", ":scheme", ":path"},
 	}
 
+	// The tags request must be sent with no cookies. Swap in a nil jar for the
+	// request so the client attaches none, then restore the original jar.
+	oldJar := c.Client.GetCookieJar()
+	c.Client.SetCookieJar(nil)
 	resp, err := c.Client.Do(req)
+	c.Client.SetCookieJar(oldJar)
 	if err != nil {
 		return err
 	}
@@ -424,6 +429,7 @@ func postDataDomeTags(ctx context.Context, c *wrappedClient, pageURL string, pay
 		return errors.New("DataDome tags response did not include a cookie")
 	}
 
+	// Store the datadome cookie the response returned in the restored jar.
 	return setCookieHeader(c, pageURL, response.Cookie)
 }
 
