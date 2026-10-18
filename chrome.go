@@ -1,8 +1,8 @@
 package hermes
 
 const (
-	UserAgent   = "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/151.0.0.0 Safari/537.36"
-	ClientHints = `"Not=A?Brand";v="99", "Google Chrome";v="151", "Chromium";v="151"`
+	UserAgent   = "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/155.0.0.0 Safari/537.36"
+	ClientHints = `"Google Chrome";v="155", "Chromium";v="155", "Not(A:Brand";v="24"`
 
 	// HomepageURL is warmed (challenge solved, tags posted) before hitting the
 	// JSON API. SiteOrigin/SiteReferer are the origin the bck.hermes.com XHR
