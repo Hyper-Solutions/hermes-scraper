@@ -342,7 +342,7 @@ func getDataDomeFrame(ctx context.Context, c *wrappedClient, frameURL string, re
 		"sec-ch-ua-platform":        {`"Windows"`},
 		"Upgrade-Insecure-Requests": {"1"},
 		"User-Agent":                {UserAgent},
-		"Accept":                    {"text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.7"},
+		"Accept":                    {"text/html,application/xhtml+xml,application/xml;q=0.9,image/jxl,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.7"},
 		"Sec-Fetch-Site":            {"cross-site"},
 		"Sec-Fetch-Mode":            {"navigate"},
 		"Sec-Fetch-Dest":            {"iframe"},
